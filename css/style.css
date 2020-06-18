@@ -1,0 +1,1159 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+.clear{
+    clear: both;
+}
+
+#navigationBar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background: transparent;
+    z-index: 10;
+}
+
+#navigationBar.bgVisible{
+    background: #fff;
+    box-shadow: 0 10px 12px -14px rgba(0,0,0,.29);
+}
+
+.logo{
+    width: 180px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 450px;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.nav-links a.visible{
+    color: #143148;
+    font-weight: 500
+}
+
+.nav-links a:hover{
+    color: #F0385A;
+}
+
+.nav-links a.visible:hover{
+    color: #F0385A;
+}
+
+.burger{
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #F0385A;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-active{
+    transform: translateX(0%);
+    z-index: 10;
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#headerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#headerTextHome{
+    max-width: 566px;
+    vertical-align: top;
+    margin-left: 15vw;
+}
+
+#headerTextHome h1{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 49px;
+    margin-bottom: 50px;
+}
+
+#headerTextHome p{
+    font-size: 18px;
+    line-height: 27px;
+}
+
+#headerTextHome a{
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+    background-color: #F0385A;
+    border: 4px solid #F0385A;
+    color: #fff;
+    border-radius: 30px;
+    padding: 18px 36px 18px 36px;
+    margin-top: 40px;
+}
+
+#headerTextHome a:hover{
+    color: #F0385A;
+    background-color: #fff;
+    border: 4px solid #F0385A;
+}
+
+#headerImageHome{
+    width: 970px;
+}
+
+#smallImage{
+    display: none;
+}
+
+#tabletImage{
+    display: none;
+}
+
+#tagline{
+    text-align: center;
+    margin: 0 auto;
+    width: 760px;
+    margin-top: 20vh;
+}
+
+#tagline h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+#tagline p{
+    font-size: 25px;
+    line-height: 37px;
+    margin-bottom: 30px;
+}
+
+#tagline a{
+    color: #F0385A;
+    font-size: 18px;
+}
+
+.workshopText p{
+    font-size: 16px;
+}
+
+.workshopText h2{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px 0px 15px 0px;
+    color: #143148;
+}
+
+.workshopText ul li{
+    display: inline;
+    color: #F0385A;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 40px;
+}
+
+#iconSpace{
+    margin-right: 1vw;
+}
+
+.description{
+    margin: 40px 0px 40px 0px;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.workshopText a{
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+    background-color: #F0385A;
+    border: 4px solid #F0385A;
+    color: #fff;
+    border-radius: 30px;
+    padding: 18px 36px 18px 36px;
+}
+
+.workshopText a:hover{
+    color: #F0385A;
+    background-color: #fff;
+    border: 4px solid #F0385A;
+}
+
+#workshopSpace{
+    margin: 0 auto;
+    margin-top: 20vh;
+    max-width: 1200px;
+    
+}
+
+.workshopText p{
+    font-size: 18px;
+    line-height: 27px;
+}
+
+#spaceIllustration{
+    width: 500px;
+    float: left;
+}
+
+#spaceIllustration img{
+    width: 100%;
+}
+
+#spaceText{
+    float: right;
+    width: 450px;
+}
+
+#workshopGame{
+    margin: 0 auto;
+    margin-top: 20vh;
+    max-width: 1200px;
+}
+
+#gameIllustration{
+    width: 500px;
+    float: right;
+}
+
+#gameIllustration img{
+    width: 100%
+}
+
+#gameText{
+    float: left;
+    width: 450px;
+}
+
+#workshopApp{
+    margin: 0 auto;
+    margin-top: 20vh;
+    max-width: 1200px;
+}
+
+#appIllustration{
+    width: 500px;
+    float: left;
+}
+
+#appIllustration img{
+    width: 100%;
+}
+
+#appText{
+    float: right;
+    width: 450px;
+    margin-top: 12vh;
+}
+
+.about{
+    margin: 0 auto;
+    margin-top: 20vh;
+    position: relative;
+    max-width: 1500px;
+}
+
+.aboutText{
+    z-index:2;
+    margin: 0 auto;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    text-align: left;
+    width: 60%;
+}
+
+.aboutText h2{
+    font-size:1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.aboutText p{
+    margin-bottom: 30px;
+    line-height: 1.5em;
+    color: #fff;
+}
+
+#pinkText {
+    color: #F0385A;
+    margin: 15px 0px 30px 0px;
+}
+
+#usp{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15vh;
+}
+
+#uspTitle h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#uspTitle p{
+    color: #F0385A;
+}
+
+#uspCardsContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 90px;
+    margin-bottom: 100px;
+}
+
+.uspCard{
+    width: 20vw;
+}
+
+.uspCard img{
+    width: 200px;
+}
+
+#uspCardLeft img{
+    width: 200px;
+    height: 200px;
+}
+
+.uspCard h4{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 70px 0px 30px 0px;
+}
+
+.uspCard p{
+    line-height: 1.5em;
+}
+
+#uspCardMiddle h4{
+    margin: 30px 0px 30px 0px;
+}
+
+.cta{
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #F0385A;
+    border: 4px solid #F0385A;
+    color: #fff;
+    border-radius: 30px;
+    padding: 18px 36px 18px 36px;
+}
+
+.cta:hover{
+    color: #F0385A;
+    background-color: #fff;
+    border: 4px solid #F0385A;
+}
+
+#promoVideo{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+#promoVideo h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#promoVideo p{
+    color: #F0385A;
+    margin-bottom: 70px;
+}
+
+#team{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15vh;
+}
+
+#team h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+#team p{
+    color: #F0385A;
+    margin-bottom: 70px;
+}
+
+.teamCard h4{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 70px 0px 30px 0px;
+}
+
+.teamCard p{
+    line-height: 1.5em;
+    color: black !important;
+}
+
+.teamCard img{
+    width: 280px;
+}
+
+.teamCard{
+    width: 300px;
+}
+
+#teamCardMiddle{
+    margin: 0px 10vw 0px 10vw;
+}
+
+#teamCardsContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 50px;
+}
+
+.quote{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+.quote img{
+    width: 35px;
+}
+
+#quoteText{
+    margin: 0 auto;
+    margin-top: 20px;
+    font-style: italic;
+    width: 687px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+
+.quote p{
+    margin-top: 40px;
+}
+
+#bottomCta{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+#bottomCta h5{
+    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 75px;
+}
+
+.footer{
+    margin-top: 20vh;
+    position: relative;
+}
+
+.footer img{
+    display: block;
+}
+
+#footerBgMid{
+    display: none;
+}
+
+#footerContainer{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+#email{
+    float: left;
+    margin-left:10vw;
+}
+
+#email h3{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    line-height: 1.4em;
+}
+
+#email p{
+    color: #F0385A;
+    margin-bottom: 30px;
+}
+
+::placeholder{
+    color: #fff;
+    font-weight: bold;
+}
+
+
+input[type=text]{
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    display: block;
+    width: 280px;
+    height: 45px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+#email button{
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #F0385A;
+    border: 4px solid #F0385A;
+    color: #fff;
+    border-radius: 30px;
+    padding: 18px 36px 18px 36px;
+    margin-top: 20px;
+  }
+  
+  #email button:hover{
+    color: #F0385A;
+    background-color: transparent;
+    border: 4px solid #F0385A;
+    cursor: pointer;
+}
+
+textarea{
+    color: #fff;
+}
+
+#middleNav{
+    float: left;
+    margin-left: 15vw;
+}
+
+#middleNav ul li{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 3vh;;
+}
+
+#middleNav ul li:hover{
+    text-decoration: underline;
+}
+
+#socials{
+    float: left;
+    margin-left: 15vw;
+}
+
+#socials h4{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    margin-bottom: 30px;
+}
+
+#socials img{
+    width: 30px;
+}
+
+img#facebook{
+    height: 30px;
+}
+
+#socials ul li{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+
+.bottomNavigation{
+    background-color: #00223A;
+    height: 100px;
+}
+
+.bottomNavigation ul{
+    float: right;
+    margin-right: 10vw;
+    margin-top: 40px
+}
+
+.bottomNavigation ul li{
+    display: inline;
+    margin-left: 5vw;
+    color: #fff;
+}
+
+.bottomNavigation ul li a{
+    text-decoration: none;
+    font-size: 1em;
+    color: #fff;
+}
+
+.bottomNavigation ul li a:hover{
+    text-decoration: underline;
+}  
+
+
+
+
+
+/*workshop pagina*/
+
+#headerTextWorkshop{
+    position: relative;
+    float: left;
+    margin-left: 8vw;
+    margin-top: 35vh;
+    z-index: 2;
+}
+
+#headerTextWorkshop h1{
+    font-weight: bold;
+    font-size: 3em;
+}
+
+#headerTextWorkshop p{
+    margin-top: 40px;
+    width: 566px;
+    font-size: 1.1em;
+    line-height: 24px;
+}
+
+#headerTextWorkshop a{
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+    background-color: #F0385A;
+    border: 4px solid #F0385A;
+    color: #fff;
+    border-radius: 30px;
+    padding: 18px 36px 18px 36px;
+    margin-top: 40px;
+}
+
+#headerTextWorkshop a:hover{
+    color: #F0385A;
+    background-color: #fff;
+    border: 4px solid #F0385A;
+}
+
+#headerImageWorkshop{
+    position: absolute;
+    width: 900px;
+    margin-left: 45vw;
+}
+
+#info{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60vh;
+}
+
+#info h3{
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+#infoDescription{
+    width: 700px;
+    margin: 0 auto;
+    line-height: 1.4em;
+    margin-bottom: 50px;
+}
+
+#infoBold{
+    font-weight: 600;
+}
+
+#infoLists{
+    position: relative;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+#infoLists ul:before{
+    content:attr(aria-label);
+    font-weight: bold;
+    color: #F0385A;
+    font-size: 1.2em;
+}
+
+#infoLists ul li:first-child{
+    margin-top: 25px;
+}
+
+#infoLists ul li{
+    margin-top: 15px;
+    list-style: none;
+}
+
+#infoLists ul li::before{
+    content: "\2022";
+    color: #F0385A;
+    font-weight: 900;
+    display: inline-block;
+    width: 1em;
+}
+
+#benodigdheden{
+    float: left;
+    margin-left: 20vw;
+}
+
+#duur{
+    float: left;
+    margin-left: 13vw;
+    margin-bottom: 150px;
+}
+
+#leerdoelen{
+    float: left;
+    margin-left: 13vw;
+}
+
+#info a{
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #F0385A;
+    border: 4px solid #F0385A;
+    color: #fff;
+    border-radius: 30px;
+    padding: 18px 36px 18px 36px;
+}
+
+#info a:hover{
+    color: #F0385A;
+    background-color: #fff;
+    border: 4px solid #F0385A;
+}
+
+
+@media screen and (max-width: 1120px){
+    .nav-links{
+        width: 60%;
+    }
+    
+    #headerTextHome h1{
+        font-size: 30px;
+        line-height: 45px;
+        margin-bottom: 30px;
+    }
+
+    #middleNav, #socials{
+        margin-left: 10vw;
+    }
+}
+
+@media screen and (max-width: 1055px){
+    .teamCard{
+        width: 200px;
+    }
+    
+    .teamCard img{
+        width: 200px;
+    }
+    
+    #teamCardMiddle{
+        margin: 0px 7vw 0px 7vw;
+    }
+
+}
+
+@media screen and (max-width: 949px){
+    .workshopText{
+        width: 80% !important;
+        text-align: center;
+        margin-right: 10%;
+    }
+
+    #spaceText, #appText{
+        margin-right: 10%;
+    }
+
+    #gameText{
+        margin-left: 10%;
+    }
+
+    #spaceIllustration , #appIllustration{
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    #gameIllustration{
+        width: 50%;
+        margin-right: 25%;
+    }
+
+    .workshopText a{
+        position: relative;
+    }
+
+    .workshopText p{
+        margin-top: 5vh;
+    }
+
+    .description{
+        margin-bottom: 10vh;
+    }
+
+    .aboutText h2{
+        font-size: 1.2em;
+    } 
+
+    .aboutText p{
+        font-size: 0.9em;
+        line-height: 1.3em;
+    }
+}
+
+@media screen and (max-width: 940px){
+    body{
+        text-align: center;
+    }
+    
+    #headerTextHome{
+        margin-top: 100px;
+        margin-left: 10vw;
+        max-width: 700px;
+    }
+
+    #headerTextHome p{
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 7vh;
+    }
+
+    #headerTextHome a{
+        position: relative;
+    }
+
+    #headerImageHome img:first-of-type{
+        display: none;
+    }
+
+    #smallImage{
+        display: none;
+    }
+
+    #tabletImage{
+        display: block;
+    }
+
+    #tagline{
+        width: 70%;
+    }
+
+    #tagline h3{
+        font-size: 25px;
+    }
+
+    #tagline p{
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    #middleNav{
+        display: none;
+    }
+
+    #bottomCta h5{
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 910px){
+    .footer img{
+        display: none;
+    }
+
+    #footerBgMid{
+        display: block;
+    }
+
+    #email{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: -20vh;
+    }
+    
+    input[type=text]{
+        width: 60%;
+        margin-left: 20%;
+    }
+    
+    #email button{
+        width: 40%;
+    }
+
+    #socials{
+    display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+        text-align: center;
+    }
+
+    #tabletImage{
+        display: none;
+    }
+
+    #smallImage{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #headerTextHome{
+        position: absolute;
+        color: #fff;
+        margin-left: 0;
+        margin-top: -15vh;
+    }
+
+    #headerTextHome a{
+        position: absolute;
+        width: 40vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #headerTextHome a:hover{
+        background-color: transparent;
+    }
+
+    #headerTextHome p{
+        width: 50vw;
+    }
+
+   .nav-links{
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 8vh;
+       width: 100%;
+       background-color: #fff;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       transform: translateX(100%);
+       transition: transform 0.3s ease-out;
+       z-index: -1;
+   } 
+
+   .nav-active{
+       transform: translateX(0%);
+   }
+
+   .nav-links li{
+       opacity: 0;
+   }
+
+   .burger{
+       display: block;
+       cursor: pointer;
+   }
+
+   #navigationBar{
+       background-color: #fff;
+   }
+
+#tagline{
+    width: 70%;
+    margin-top: 90px;
+}
+
+#tagline h3{
+    font-size: 20px;
+}
+
+#tagline p{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.about p,  .about h2{
+    text-align: center;
+}
+
+#uspCardsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.uspCard{
+    width: 80%;
+    margin-left:10%;
+    margin-top: 10vh;
+}
+
+#uspTitle p{ 
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+}
+
+@media screen and (max-width:700px){
+    #quoteText{
+        width: 90%;
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+
+    #bottomCta h5{
+        font-size: 1.5em;
+    }
+
+    .aboutText{
+        top: 20%;
+        width: 90%;
+        left: 5%;
+    }
+
+    #teamCardsContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+    
+    .teamCard{
+        width: 80%;
+        margin-left:10%;
+        margin-top: 10vh;
+    }
+
+    #teamCardMiddle{
+        margin: 0;
+        margin-left: 10%;
+    }
+
+}
+
+
+@media screen and (max-width:640px){
+    .bottomNavigation ul{
+        width: 100%;
+        margin-right:0;
+    }
+    
+    .bottomNavigation ul li{
+        margin-left: 1vw;
+        color: #fff;
+    }
+     
+}
+
+@media screen and (max-width: 550px){
+    .about{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 514px){
+    #email button{
+        width: 60%;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 503px){
+    #headerTextHome p{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #uspTitle h3{
+        font-size: 1.3em;
+    }
+
+    #email{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    #email h3{
+        margin: 0;
+        margin-left: 5vw;
+        margin-bottom: 20px;
+    }
+
+    #email p{
+        display: none;
+    }
+
+    input[type=text]{
+        margin-left: 20%;
+    }
+
+    .bottomNavigation{
+        background-color: #031224; 
+        height: 170px;
+    }
+
+    .bottomNavigation ul li{
+        display: block;
+        margin-bottom: 25px;
+    }
+}
+
+
+
