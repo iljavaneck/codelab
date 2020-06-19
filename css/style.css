@@ -923,6 +923,79 @@ img#facebook{
     margin-left: 10%;
 }
 
+#recomendation{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+#recomendation p{
+    font-size: 25px;
+}
+
+#recContainer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+    margin: 0 -25px;
+    list-style: none;
+}
+
+#recContainer h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #143148;
+    margin-top: 50px;
+}
+
+#recContainer a{
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #F0385A;
+    border: 4px solid #F0385A;
+    color: #fff;
+    border-radius: 30px;
+    padding: 18px 36px 18px 36px; 
+}
+
+#recContainer a:hover{
+    color: #F0385A;
+    background-color: #fff;
+    border: 4px solid #F0385A;
+}
+
+#leftRec , #rightRec{
+    max-width: 475px;
+    margin: 100px 25px;
+}
+
+#leftRec p, #rightRec p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 50px;
+}
+
+#leftRec h3{
+    margin-top: 68px;
+}
+
+#leftRec li, #rightRec li{
+    color: #F0385A;
+    margin: 20px 0px;
+}
+
+#leftRec img , #rightRec img{
+    max-width: 330px;
+}
+
+#rightRec img{
+    margin-top: -3vh;
+}
+
+
+
 
 
 
@@ -1127,6 +1200,28 @@ img#facebook{
     #onderdeel1{
         margin-top: 20vh;
     }
+
+    #recContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+        margin-top: 0px;
+        margin-bottom: 100px;
+    }
+    
+    #leftRec, #rightRec{
+        margin-top: 10vh;
+        max-width: 100%;
+    }
+
+    #leftRec p , #rightRec p{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+
 }
 
 
