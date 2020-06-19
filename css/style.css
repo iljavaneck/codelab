@@ -636,26 +636,23 @@ img#facebook{
 
 
 
-/*workshop pagina*/
+/***************************    workshop pagina **********************************/
 
 #headerTextWorkshop{
-    position: relative;
-    float: left;
-    margin-left: 8vw;
-    margin-top: 35vh;
-    z-index: 2;
+    max-width: 600px;
+    vertical-align: top;
+    margin-left: 15vw;
 }
 
 #headerTextWorkshop h1{
     font-weight: bold;
     font-size: 3em;
+    margin-bottom: 50px;
 }
 
 #headerTextWorkshop p{
-    margin-top: 40px;
-    width: 566px;
-    font-size: 1.1em;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 #headerTextWorkshop a{
@@ -677,15 +674,13 @@ img#facebook{
 }
 
 #headerImageWorkshop{
-    position: absolute;
     width: 900px;
-    margin-left: 45vw;
 }
 
 #info{
     margin: 0 auto;
     text-align: center;
-    margin-top: 60vh;
+    margin-top: 20vh;
 }
 
 #info h3{
@@ -707,9 +702,14 @@ img#facebook{
 
 #infoLists{
     position: relative;
-    text-align: left;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: left;
+    width: 90%;
+    left: 5%;
 }
 
 #infoLists ul:before{
@@ -736,20 +736,13 @@ img#facebook{
     width: 1em;
 }
 
-#benodigdheden{
-    float: left;
-    margin-left: 20vw;
+.list{
+    width: 300px;
 }
 
 #duur{
-    float: left;
-    margin-left: 13vw;
-    margin-bottom: 150px;
-}
-
-#leerdoelen{
-    float: left;
-    margin-left: 13vw;
+    width: 200px;
+    margin: 0px 10vw 0px 10vw;
 }
 
 #info a{
@@ -767,6 +760,73 @@ img#facebook{
     background-color: #fff;
     border: 4px solid #F0385A;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index:1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  .close {
+    color: white;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #Ffbc00;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 50px;
+    background-color: #F0385A;
+    color: white;
+  }
+
+  .modal-header h4{
+      font-weight: bold;
+      font-size: 4em;
+  }
+  
+  .modal-body {
+      padding: 50px;
+      font-size: 1.5em;
+      line-height: 1.7em;
+  }
 
 
 @media screen and (max-width: 1120px){
@@ -805,6 +865,20 @@ img#facebook{
         width: 80% !important;
         text-align: center;
         margin-right: 10%;
+    }
+
+    #headerTextWorkshop h1{
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+
+    #headerTextWorkshop p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    #headerTextWorkshop a{
+        margin-top: 20px;
     }
 
     #spaceText, #appText{
@@ -876,7 +950,7 @@ img#facebook{
         display: none;
     }
 
-    #tabletImage{
+    html.home #tabletImage{
         display: block;
     }
 
@@ -900,6 +974,20 @@ img#facebook{
     #bottomCta h5{
         font-size: 2em;
     }
+
+    #headerTextWorkshop a{
+        position: relative;
+    }
+
+    #headerTextWorkshop p{
+        margin-bottom: 7vh;
+    }
+
+    #headerTextWorkshop{
+        margin-left: 10vw;
+        margin-top: 5vh;
+    }
+
 }
 
 @media screen and (max-width: 910px){
@@ -929,9 +1017,44 @@ img#facebook{
     #socials{
     display: none;
     }
+
+    #infoLists{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 80px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .list{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 0;
+    }
+
+    #duur{
+        width: 80%;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    #leerdoelen{
+        margin-bottom: 5vh;
+    }
+
+    #headerTextWorkshop{
+        margin-left: 5vw;
+    }
+
 }
 
-
+@media screen and (max-width: 807px){
+    .aboutText{
+        top: 20%;
+    }
+}
 
 @media screen and (max-width: 768px){
     body{
@@ -939,11 +1062,11 @@ img#facebook{
         text-align: center;
     }
 
-    #tabletImage{
+    html.home #tabletImage{
         display: none;
     }
 
-    #smallImage{
+    html.home #smallImage{
         display: block;
         width: 100%;
         height: auto;
@@ -1017,6 +1140,10 @@ img#facebook{
     line-height: 24px;
 }
 
+.aboutText{
+    top: 15%;
+}
+
 .about p,  .about h2{
     text-align: center;
 }
@@ -1039,6 +1166,31 @@ img#facebook{
 
 #uspTitle p{ 
     margin-bottom: 0;
+}
+
+#headerImageWorkshop img:first-child{
+    display: none;
+}
+
+#headerImageWorkshop #smallImage{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#headerTextWorkshop{
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    margin-top: -55vh;
+}
+
+#headerTextWorkshop a:hover{
+    background-color: transparent;
+}
+
+#infoDescription{
+    width: 80%;
 }
 
 
@@ -1088,6 +1240,21 @@ img#facebook{
 
 }
 
+@media screen and (max-width: 660px){
+    .aboutText p:nth-child(4){
+        display: none;
+    }
+
+    #headerTextWorkshop{
+        margin-top: -45vh;
+    }
+
+    #headerTextWorkshop p{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
 
 @media screen and (max-width:640px){
     .bottomNavigation ul{
@@ -1100,6 +1267,21 @@ img#facebook{
         color: #fff;
     }
      
+}
+
+@media screen and (max-width: 575px){
+    
+    #headerTextWorkshop{
+        margin-top: -30vh;
+    }
+    
+    #headerTextWorkshop h1{
+        margin-bottom: 15px;
+    }
+
+    #headerTextWorkshop a{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 550px){
@@ -1152,6 +1334,41 @@ img#facebook{
     .bottomNavigation ul li{
         display: block;
         margin-bottom: 25px;
+    }
+
+    #uspTitle p{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #promoVideo p{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    #headerTextWorkshop{
+        margin-top: -25vh;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+    #smallImage{
+        margin-top:100px;
+    }
+
+    #headerTextWorkshop{
+        background-color: #031224;
+        padding-top: 100px;
+        margin-top: -30vh;
+    }
+
+    #infoBold{
+        width: 80%;
+        margin-left: 10%;
     }
 }
 

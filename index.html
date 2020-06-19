@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="home">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ontdek de skills van de toekomst met Code Lab</title>
@@ -17,9 +17,9 @@
         <nav id="navigationBar">
                 <div class="logo"><a href="#"><img id="logo" src="assets/svg/logo-black.svg"></a></div>
                 <ul class="nav-links">
-                    <li><a href="#">Waarom?</a></li>
-                    <li><a href="#">Workshops</a></li>
-                    <li><a href="#">Het team</a></li>
+                    <li><a href="#about">Waarom?</a></li>
+                    <li><a href="#workshopSpace">Workshops</a></li>
+                    <li><a href="#team">Het team</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <div class="burger">
@@ -37,7 +37,7 @@
                         Als leraar samen met de leerlingen deze skills op unieke wijze ontdekken?
                         De workshops van Code Lab helpen jou daarbij!
                         </p>
-                        <a href="#">Bekijk de workshops</a>
+                        <a href="#workshopSpace">Bekijk de workshops</a>
                     </div><div id="headerImageHome">
                             <img src="assets/svg/desktop-header.svg" alt="illustration of backpack">
                             <img id="tabletImage" src="assets/svg/tablet-header.svg">
@@ -107,13 +107,14 @@
                 </div>
         </article><div class="clear"></div>
 
-        <article class="about">
+        <article class="about" id="about">
                 <img src="assets/svg/blue-bg.svg" alt="blue background">
             <div class="aboutText">
                 <h2>Code lab in de klas</h2>
                 <p id="pinkText">Waarom de skills van de 21e eeuw belangrijk zijn</p>
                 <p>De maatschappij verandert door technologie en digitalisering van een industriële naar een kennis- en netwerksamenleving. Gevolg is bijvoorbeeld dat meer mensenwerk wordt gedaan door machines. En bij steeds meer werk worden computers en ict gebruikt. Werk verandert, functies veranderen. 21e eeuwse vaardigheden, of 21st century skills, zijn competenties die leerlingen nodig hebben om succesvol deel te nemen in de maatschappij van de toekomst.</p>
-             </div>
+                <p>Met Code Lab ontwikkelen leerlingen toekomstgerichte en digitale vaardigheden als computational thinking, informatievaardigheden, ict-basisvaardigheden en mediawijsheid. Ook leren ze samenwerken en communiceren.</p>
+            </div>
         </article>
 
         <article id="usp">
@@ -157,7 +158,7 @@
                     <div class="teamCard">
                         <img src="img/ilja.png" alt="">
                         <h4>Ilja</h4>
-                        <p>Houd te veel van koffie en design. In zijn vrije tijd gaat hij er graag op uit met zijn camera. </p>
+                        <p>Houdt te veel van koffie en design. In zijn vrije tijd gaat hij er graag op uit met zijn camera. </p>
                     </div>
                     <div class="teamCard" id="teamCardMiddle">
                         <img src="img/max.png" alt="">
@@ -273,6 +274,17 @@
                 $('.navigation').removeClass('bgVisible');
                 $('.navigation ul li a').removeClass('visible')
                 $(".logo").attr("src", initialSrc);
+            }
+            });
+            $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
             }
             });
            // $('.paralax').paroller(); 
