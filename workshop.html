@@ -29,18 +29,20 @@
         </nav>
 
 
-    <header>
-            <div id="headerTextWorkshop">
-                <h1>Space Code</h1>
-                <p>Neem je leerlingen mee op avontuur en ontdek de basis van coderen!
+        <header>
+            <div id="headerContainer">
+                <div id="headerTextWorkshop">
+                    <h1>Space Code</h1>
+                    <p>Neem je leerlingen mee op avontuur en ontdek de basis van coderen!
                     Deze workshop is ideaal voor iedereen die kennis wil maken met coderen en geen achtergrondkennis heeft.
-                </p>
-                <a href="#">scroll naar beneden!</a>
+                    </p>
+                    <a href="#info">scroll naar beneden!</a>
+                </div><div id="headerImageWorkshop">
+                        <img src="assets/svg/desktop-header-ws.svg" alt="illustration of rocket">
+                        <img id="smallImage" src="assets/svg/header-small-ws.svg">
+                </div>
+                <div class="clear"></div>
             </div>
-            <div id="headerImageWorkshop">
-                <img src="assets/svg/desktop-header-ws.svg" alt="illustration of rocket">
-            </div>
-            <div class="clear"></div>
     </header>
 
     <main>
@@ -54,29 +56,42 @@
                 <p id="infoBold">Voor al onze workshops hoeft de leraar geen voorkennis te hebben!</p>
             </div>
             <div id="infoLists">
-                <div id="benodigdheden">
+                <div id="benodigdheden" class="list">
                     <ul  aria-label="Benodigdheden:">
                         <li>Lespakket</li>
                         <li>Elk kind een laptop<br>met internetverbinding</li>
                     </ul>
                 </div>
-                <div id="duur">
+                <div id="duur"  class="list">
                     <ul aria-label="Duur:">
                         <li>2 tot 3 uur</li>
                     </ul>
                 </div>
-                <div id="leerdoelen">
+                <div id="leerdoelen"  class="list">
                     <ul aria-label="leerdoelen:">
                         <li>Probleemoplossend denken</li>
                         <li>De basis van p5 leren</li>
                         <li>Kennis maken met coderen</li>
                     </ul>
                 </div>
-                <div class="clear"></div>
             </div>
-            <a href="#">Download het Lespakket</a>
+            <a id="myBtn" href="downloads/lespakket.zip" download="">Download het Lespakket</a>
 
         </article>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>Aan de slag!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Bedankt voor het downloaden van het lespakket!</p>
+                <p>Als u nog vragen heeft, neem dan gerust contact met ons op.</p>
+              </div>
+            </div>
+          
+          </div>
 
 
 
@@ -102,8 +117,16 @@
             
             var initialSrc = "assets/svg/logo-black.svg";
             var scrollSrc = "assets/svg/logo-color.svg";
+            var navLinks = document.querySelectorAll('.nav-links li');
 
         $( document ).ready(function() {    
+            $('.burger').click(function(){
+                $('.nav-links').toggleClass('nav-active');
+                $('.burger').toggleClass('toggle');
+                $('.nav-links li').css({opacity: 1});
+                $('.nav-links li a').css("color", "#f0385a");
+                $('.nav-links li a').css("font-weight", "bold");
+            });
             $(window).on("scroll", function() {
             var scrollPos = $(window).scrollTop();
             if (scrollPos > 70) {
@@ -111,18 +134,48 @@
                 $('.nav-links li a').addClass('visible')
                 $("#logo").attr("src", scrollSrc);
             } else {
-                $('#navigationBar').removeClass('bgVisible');
-                $('.nav-links li a').removeClass('visible')
-                $("#logo").attr("src", initialSrc);
+                $('.navigation').removeClass('bgVisible');
+                $('.navigation ul li a').removeClass('visible')
+                $(".logo").attr("src", initialSrc);
             }
             });
+            $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+                window.location.hash = hash;
+            });
+            }
+            });
+            var modal = document.getElementById("myModal");
+            var btn = document.getElementById("myBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
            // $('.paralax').paroller(); 
 
 
 
         });
-
-        </script>
+    
+    
+    
+    
+    
+    
+    </script>
 
 
 
