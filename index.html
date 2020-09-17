@@ -20,7 +20,7 @@
                     <li><a href="#about">Waarom?</a></li>
                     <li><a href="#workshopSpace">Workshops</a></li>
                     <li><a href="#team">Het team</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#footerContainer">Contact</a></li>
                 </ul>
                 <div class="burger">
                     <div class="line1"></div>
@@ -53,7 +53,7 @@
         <section id="tagline">
                     <h3>Vandaag beginnen aan morgen.</h3>
                     <p>De workshops van Code Lab bieden een unieke kans om leerlingen inzichten te geven op het terrein van codetaal en programmeren – één van de 21st century skills.</p>
-                    <a href="#">Lees meer over ons</a>  
+                    <a href="#team">Lees meer over ons</a>  
         </section>
 
 
@@ -85,7 +85,7 @@
                     </ul>
                     <p class="description">Hebben de leerlingen al ervaring met coderen? 
                         In deze workshop gaan ze aan de slag met meer geavanceerde functies zoals animaties om een game te ontwikkelen!</p>
-                    <a href="#">Bekijk deze workshop</a>
+                    <a href="#">Tijdelijk onbeschikbaar</a>
                 </div>
         </article><div class="clear"></div>
 
@@ -103,7 +103,7 @@
                     <p class="description">Na deze workshop heeft iedereen een eigen app bedacht
                          en ook ontwikkeld! Haal het maximale uit de creativiteit van de leerlingen 
                          en laat ze kennis maken met het ‘echte’ werk.</p>
-                    <a href="#">Bekijk deze workshop</a>
+                    <a href="#">Tijdelijk onbeschikbaar</a>
                 </div>
         </article><div class="clear"></div>
 
@@ -139,14 +139,14 @@
                     <p>Onze workshops zijn super leuk voor leerlingen, en makkelijk voor de leraren!  Er is geen technische kennis vereist, onze lespakketten zijn compleet met werkbladen en instructievideo’s. </p>
                 </div>
             </div>
-            <a class="cta">Bekijk deze workshop</a>
+            <a href="#workshopSpace" class="cta">Let's go!</a>
         </article>
 
         <article id="promoVideo">
-            <h3>Promotievideo</h3>
+            <h3>Een dag met Code Lab</h3>
             <p>Wij gaan voor de volgende generatie creatieve denkers</p>
-            <video width="80%" height="" controls>
-                <source src="video/stock-placeholder.mp4" type="video/mp4">
+            <video width="80%" height="" controls poster="img/thumbnail.png">
+                <source src="https://player.vimeo.com/external/431234156.hd.mp4?s=23ea244a3ad1dbc5027ce11e3b96e6e1f03c2806&profile_id=175" type="video/mp4">
               De browser waarin je deze site bekijkt ondersteunt geen video.
             </video>
         </article>
@@ -171,7 +171,7 @@
                         <p>22 jaartjes jong en heeft een passie voor coderen die hij graag met jullie deelt!</p>
                     </div>
             </div>
-            <a class="cta">Neem contact op met ons</a>
+            <a href="#footerContainer" class="cta">Neem contact op met ons</a>
         </article>
 
         <article class="quote">
@@ -192,12 +192,12 @@
             <img id="footerBgMid" src="assets/svg/footer-bg-medium.svg" alt="blue background">
             <div id="footerContainer">
                 <div id="email">
-                    <h3>Schrijf je in voor onze <br>nieuwsbrief</h3>
-                    <p>En mis nooit meer een<br>nieuwe workshop!</p>
+                    <h3>Neem contact op <br>met ons!</h3>
+                    <p>vragen? Vul je e-mail in<br>en wij nemen contact op</p>
                         <form class="contact-form" action="contactform.php" method="POST">
                             <input  type="text" name="name" placeholder="Naam">
                             <input  type="text" name="mail" placeholder="E-mail">
-                            <button type="submit" name="submit">Schrijf me in!</button>
+                            <button type="submit" name="submit">Neem contact op</button>
                         </form>
                 </div>
                 <div id="middleNav">
@@ -258,8 +258,8 @@
 
         $( document ).ready(function() {    
             $('.burger').click(function(){
-                $('.nav-links').toggleClass('nav-active');
                 $('.burger').toggleClass('toggle');
+                $('.nav-links').toggleClass('nav-active');
                 $('.nav-links li').css({opacity: 1});
                 $('.nav-links li a').css("color", "#f0385a");
                 $('.nav-links li a').css("font-weight", "bold");
